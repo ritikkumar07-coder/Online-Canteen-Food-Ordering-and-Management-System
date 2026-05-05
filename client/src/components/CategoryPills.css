@@ -1,0 +1,53 @@
+/* ========================================
+   CategoryPills Component - Professional Style
+   ======================================== */
+
+.category-pills {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.category-pills::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.category-pill {
+  flex-shrink: 0;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.category-pill:hover {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+}
+
+.category-pill.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-weight: 600;
+  box-shadow: var(--shadow-glow);
+}
+
+.category-pill.active:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+

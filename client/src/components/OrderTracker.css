@@ -1,0 +1,102 @@
+.order-tracker {
+  position: relative;
+  padding: var(--space-lg) 0;
+}
+
+.tracker-line {
+  position: absolute;
+  top: calc(var(--space-lg) + 20px);
+  left: 40px;
+  right: 40px;
+  height: 3px;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-full);
+}
+
+.tracker-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+.tracker-steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tracker-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.step-dot {
+  width: 40px;
+  height: 40px;
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-bg-elevated);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.step-icon {
+  font-size: 1rem;
+}
+
+.step-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.tracker-step.completed .step-dot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.tracker-step.completed .step-label {
+  color: var(--color-text-secondary);
+}
+
+.tracker-step.current .step-dot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-muted);
+  animation: pulse 2s infinite;
+}
+
+.tracker-step.current .step-label {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .step-dot {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .step-icon {
+    font-size: 0.875rem;
+  }
+  
+  .step-label {
+    font-size: 0.625rem;
+  }
+  
+  .tracker-line {
+    left: 30px;
+    right: 30px;
+  }
+}
