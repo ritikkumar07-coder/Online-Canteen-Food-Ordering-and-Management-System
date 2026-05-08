@@ -38,4 +38,7 @@ Database
 MongoDB
 Mongoose ODM
 Authentication
-JWT (JSON Web Tokens)
+JWT (JSON Web Tokens)...
+
+
+WORK IN PROGRESS....
