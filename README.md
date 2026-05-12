@@ -1,6 +1,7 @@
 A full-stack online canteen food ordering and management system designed to simplify food ordering, reduce waiting time, and streamline canteen operations for students, employees, canteen staff, and administrators.
 
 🚀 Features
+
 👤 User Features
 User Registration & Login
 Browse Menu by Categories
